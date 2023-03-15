@@ -1,7 +1,5 @@
 import torch
 from torch import nn
-import torchvision
-from dataloader import dataset
 
 
 def conv_block(in_channel, out_channel):
@@ -92,4 +90,3 @@ class densenet(nn.Module):
         block = []
         block.append(transition(channels, channels // 2))
         return nn.Sequential(*block)
-

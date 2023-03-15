@@ -1,3 +1,4 @@
+img_path
 D://MaskProject/Database/FaceData_Resized/s0/1.jpeg
 D://MaskProject/Database/FaceData_Resized/s0/10.jpeg
 D://MaskProject/Database/FaceData_Resized/s0/11.jpeg

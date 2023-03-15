@@ -1,10 +1,22 @@
+import time
+from torch import nn
 
 
-def train(net, train_iter, criterion, optimizer, num_epochs, device, num_print, lr_scheduler=None, test_iter=None):
+def test(net, test_iter, criterion, device):
+    for i, (img, label) in enumerate(test_iter):
+        img, label = img.to(device), label.to(device)
+        output = net(img)
+
+        total += label.size(0)
+        correct += (output.argmax(dim=1) == label).sum().item()
+    test_acc = 100 * correct / total
+    return test_acc
+
+
+def train(net, train_iter, criterion, optimizer, num_epochs, device, num_print, test_iter=None):
     net.train()
     record_train = list()
     record_test = list()
-    
 
     for epoch in range(num_epochs):
         print(
@@ -12,27 +24,27 @@ def train(net, train_iter, criterion, optimizer, num_epochs, device, num_print, 
         total, correct, train_loss = 0, 0, 0
         start = time.time()
 
-        for i, (X, y) in enumerate(train_iter):
-            X, y = X.to(device), y.to(device)
-            output = net(X)
-            loss = criterion(output, y)
+        for i, (img, label) in enumerate(train_iter):
+            img, label = img.to(device), label.to(device)
+            output = net(img)
+            loss = criterion(output, label)
 
             optimizer.zero_grad()
             loss.backward()
             optimizer.step()
 
             train_loss += loss.item()
-            total += y.size(0)
-            correct += (output.argmax(dim=1) == y).sum().item()
+            total += label.size(0)
+            correct += (output.argmax(dim=1) == label).sum().item()
             train_acc = 100.0 * correct / total
 
             if (i + 1) % num_print == 0:
                 print("step: [{}/{}], train_loss: {:.3f} | train_acc: {:6.3f}% | lr: {:.6f}"
                       .format(i + 1, len(train_iter), train_loss / (i + 1),
-                              train_acc, get_cur_lr(optimizer)))
+                              train_acc, optimizer.state_dict()['param_groups'][0]['lr']))
 
-        if lr_scheduler is not None:
-            lr_scheduler.step()
+        # if lr_scheduler is not None:
+        #     lr_scheduler.step()
 
         print("--- cost time: {:.4f}s ---".format(time.time() - start))
 
