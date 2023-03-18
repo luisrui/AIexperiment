@@ -54,7 +54,7 @@ if __name__ == '__main__':
         writer.add_scalar("Train loss", record_loss[i], i)
     for i in range(len(record_train)):
         writer.add_scalar("Train accuracy", record_train[i], i)
-    for i in range(len(record_loss)):
+    for i in range(len(record_test)):
         writer.add_scalar("Test accuracy", record_test[i], i)
     writer.close()
     # print('record_test : ', record_test)
