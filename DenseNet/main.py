@@ -26,7 +26,7 @@ EPOCH = 10
 num_print = 10
 criterion = nn.CrossEntropyLoss()
 
-model = densenet(in_channel=3, num_classes=50)
+model = densenet(in_channel=3, num_classes=50).to(device)
 
 optimizer = optim.SGD(model.parameters(), lr=LR, momentum=0.9)
 
