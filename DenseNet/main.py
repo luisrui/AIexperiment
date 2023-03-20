@@ -31,10 +31,10 @@ model = densenet(in_channel=3, num_classes=50).to(device)
 optimizer = optim.SGD(model.parameters(), lr=LR, momentum=0.9)
 
 trainset = CustomDataset(image_file='D:\\AIexperiment\\DenseNet\data\\train\\train_imgs.txt',
-                         label_file='D:\\AIexperiment\\DenseNet\data\\train\\train_labels.txt')
+                         label_file='D:\\AIexperiment\\DenseNet\data\\train\\train_labels.txt', transform=transforms)
 
 testset = CustomDataset(image_file='D:\\AIexperiment\\DenseNet\\data\\test\\test_imgs.txt',
-                        label_file='D:\\AIexperiment\\DenseNet\\data\\test\\test_labels.txt')
+                        label_file='D:\\AIexperiment\\DenseNet\\data\\test\\test_labels.txt', transform=transforms)
 
 train_iter = torch.utils.data.DataLoader(
     trainset, batch_size=BATCH_SIZE, shuffle=True, num_workers=2)
@@ -44,12 +44,12 @@ test_iter = torch.utils.data.DataLoader(
 if __name__ == '__main__':
     record_loss, record_train, record_test = train(model, train_iter, criterion, optimizer,
                                                    EPOCH, device, num_print, test_iter)
-    torch.save(model, 'D:\\AIexperiment\\DenseNet\\savedmodels\\first_10.pth')
-    input = torch.ones((64, 3, 32, 32))
-    output = model(input)
-
+    # torch.save(model, 'D:\\AIexperiment\\DenseNet\\savedmodels\\first_10.pth')
+    # input = torch.ones((64, 3, 32, 32))
+    # output = model(input.to)
+    #model = torch.load('./DenseNet/savedmodels/first_10.pth')
     writer = SummaryWriter('D:\\AIexperiment\\DenseNet\\result')
-    writer.add_graph(model, input)
+    #writer.add_graph(model, input)
     for i in range(len(record_loss)):
         writer.add_scalar("Train loss", record_loss[i], i)
     for i in range(len(record_train)):

@@ -23,7 +23,7 @@ class CustomDataset(Dataset):
         label = int(label[1:])
 
         if self.transform:
-            image = self.transform(image)
+            image = self.transform(image.to(torch.float32))
 
         # 返回一张照片，一个标签
         return image, label
