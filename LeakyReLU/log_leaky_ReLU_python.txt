@@ -1,0 +1,597 @@
+Start profiling...
+STAGE:2023-03-27 15:25:53 29481:29481 ActivityProfilerController.cpp:294] Completed Stage: Warm Up
+STAGE:2023-03-27 15:25:58 29481:29481 ActivityProfilerController.cpp:300] Completed Stage: Collection
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                                                   Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg    # of Calls  
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                                           aten::select         0.00%      42.000us         0.00%      54.000us      54.000us             1  
+                                       aten::as_strided         0.00%      12.000us         0.00%      12.000us      12.000us             1  
+                                          aten::reshape         0.00%      29.000us         0.00%      45.000us      45.000us             1  
+                                   aten::_reshape_alias         0.00%      16.000us         0.00%      16.000us      16.000us             1  
+                                           aten::conv2d         0.00%      33.000us        97.69%        4.557s        4.557s             1  
+                                      aten::convolution         0.00%      68.000us        97.69%        4.557s        4.557s             1  
+                                     aten::_convolution         0.00%      77.000us        97.68%        4.557s        4.557s             1  
+                                aten::cudnn_convolution         4.34%     202.653ms        97.68%        4.556s        4.556s             1  
+                               cudaPointerGetAttributes         0.00%      14.000us         0.00%      14.000us      14.000us             1  
+                               cudaPointerGetAttributes         0.00%       2.000us         0.00%       2.000us       2.000us             1  
+                               cudaPointerGetAttributes         0.00%      15.000us         0.00%      15.000us      15.000us             1  
+                                          cudaHostAlloc         0.00%      73.000us         0.00%      73.000us      73.000us             1  
+                               cudaPointerGetAttributes         0.00%       4.000us         0.00%       4.000us       4.000us             1  
+                                          cudaHostAlloc         0.00%      30.000us         0.00%      30.000us      30.000us             1  
+                                     cudaGetDeviceCount         0.00%       0.000us         0.00%       0.000us       0.000us             1  
+                                   cudaDriverGetVersion         0.00%       0.000us         0.00%       0.000us       0.000us             1  
+                                 cudaDeviceGetAttribute         0.00%       0.000us         0.00%       0.000us       0.000us             1  
+                                 cudaDeviceGetAttribute         0.00%       0.000us         0.00%       0.000us       0.000us             1  
+                                 cudaDeviceGetAttribute         0.00%       0.000us         0.00%       0.000us       0.000us             1  
+                                 cudaDeviceGetAttribute         0.00%       0.000us         0.00%       0.000us       0.000us             1  
+                                 cudaDeviceGetAttribute         0.00%       0.000us         0.00%       0.000us       0.000us             1  
+                                 cudaDeviceGetAttribute         0.00%       0.000us         0.00%       0.000us       0.000us             1  
+                                 cudaDeviceGetAttribute         0.00%       0.000us         0.00%       0.000us       0.000us             1  
+                                 cudaDeviceGetAttribute         0.00%       0.000us         0.00%       0.000us       0.000us             1  
+                                 cudaDeviceGetAttribute         0.00%       0.000us         0.00%       0.000us       0.000us             1  
+                                 cudaDeviceGetAttribute         0.00%       0.000us         0.00%       0.000us       0.000us             1  
+                                 cudaDeviceGetAttribute         0.00%       0.000us         0.00%       0.000us       0.000us             1  
+                                 cudaDeviceGetAttribute         0.00%       0.000us         0.00%       0.000us       0.000us             1  
+                                 cudaDeviceGetAttribute         0.00%       0.000us         0.00%       0.000us       0.000us             1  
+                                 cudaDeviceGetAttribute         0.00%       0.000us         0.00%       0.000us       0.000us             1  
+                                 cudaDeviceGetAttribute         0.00%       0.000us         0.00%       0.000us       0.000us             1  
+                                cudaGetDeviceProperties         0.01%     279.000us         0.01%     279.000us     279.000us             1  
+                                 cudaDeviceGetAttribute         0.00%       0.000us         0.00%       0.000us       0.000us             1  
+                                 cudaDeviceGetAttribute         0.00%       0.000us         0.00%       0.000us       0.000us             1  
+                                 cudaDeviceGetAttribute         0.00%       0.000us         0.00%       0.000us       0.000us             1  
+                              cudaStreamCreateWithFlags         5.18%     241.769ms         5.18%     241.769ms     241.769ms             1  
+                              cudaStreamCreateWithFlags         0.16%       7.629ms         0.16%       7.629ms       7.629ms             1  
+                              cudaStreamCreateWithFlags         0.00%      22.000us         0.00%      22.000us      22.000us             1  
+                              cudaStreamCreateWithFlags         0.00%       1.000us         0.00%       1.000us       1.000us             1  
+                              cudaStreamCreateWithFlags         0.00%       2.000us         0.00%       2.000us       2.000us             1  
+                              cudaStreamCreateWithFlags         0.00%       2.000us         0.00%       2.000us       2.000us             1  
+                              cudaStreamCreateWithFlags         0.00%       9.000us         0.00%       9.000us       9.000us             1  
+                              cudaStreamCreateWithFlags         0.00%       2.000us         0.00%       2.000us       2.000us             1  
+                       cudaDeviceGetStreamPriorityRange         0.00%       1.000us         0.00%       1.000us       1.000us             1  
+                           cudaStreamCreateWithPriority         0.00%       2.000us         0.00%       2.000us       2.000us             1  
+                           cudaStreamCreateWithPriority         0.00%      10.000us         0.00%      10.000us      10.000us             1  
+                           cudaStreamCreateWithPriority         0.00%       1.000us         0.00%       1.000us       1.000us             1  
+                           cudaStreamCreateWithPriority         0.00%       8.000us         0.00%       8.000us       8.000us             1  
+                                             cudaMalloc         0.01%     545.000us         0.01%     545.000us     545.000us             1  
+                                             cudaMalloc         0.00%      51.000us         0.00%      51.000us      51.000us             1  
+                                             cudaMalloc         0.00%       6.000us         0.00%       6.000us       6.000us             1  
+                                             cudaMalloc         0.00%       4.000us         0.00%       4.000us       4.000us             1  
+                                        cudaMemsetAsync         0.00%      55.000us         0.00%      55.000us      55.000us             1  
+                                        cudaMemsetAsync         0.00%      15.000us         0.00%      15.000us      15.000us             1  
+                                        cudaMemsetAsync         0.00%      10.000us         0.00%      10.000us      10.000us             1  
+                                        cudaMemsetAsync         0.00%      17.000us         0.00%      17.000us      17.000us             1  
+                                          cudaHostAlloc         0.00%      31.000us         0.00%      31.000us      31.000us             1  
+                               cudaHostGetDevicePointer         0.00%       1.000us         0.00%       1.000us       1.000us             1  
+                                               cudaFree        33.13%        1.546s        33.13%        1.546s        1.546s             1  
+                                 cudaDeviceGetAttribute         0.00%       1.000us         0.00%       1.000us       1.000us             1  
+                                 cudaDeviceGetAttribute         0.00%       0.000us         0.00%       0.000us       0.000us             1  
+                                 cudaDeviceGetAttribute         0.00%       0.000us         0.00%       0.000us       0.000us             1  
+                                 cudaDeviceGetAttribute         0.00%       0.000us         0.00%       0.000us       0.000us             1  
+                                 cudaDeviceGetAttribute         0.00%       0.000us         0.00%       0.000us       0.000us             1  
+                                 cudaDeviceGetAttribute         0.00%       0.000us         0.00%       0.000us       0.000us             1  
+                                 cudaDeviceGetAttribute         0.00%       0.000us         0.00%       0.000us       0.000us             1  
+                                 cudaDeviceGetAttribute         0.00%       0.000us         0.00%       0.000us       0.000us             1  
+                                 cudaDeviceGetAttribute         0.00%       0.000us         0.00%       0.000us       0.000us             1  
+                                 cudaDeviceGetAttribute         0.00%       0.000us         0.00%       0.000us       0.000us             1  
+                                 cudaDeviceGetAttribute         0.00%       0.000us         0.00%       0.000us       0.000us             1  
+                                 cudaDeviceGetAttribute         0.00%       0.000us         0.00%       0.000us       0.000us             1  
+                                 cudaDeviceGetAttribute         0.00%       0.000us         0.00%       0.000us       0.000us             1  
+                                 cudaDeviceGetAttribute         0.00%       0.000us         0.00%       0.000us       0.000us             1  
+                                   cudaGetSymbolAddress         0.00%       1.000us         0.00%       1.000us       1.000us             1  
+                                               cudaFree         6.44%     300.361ms         6.44%     300.361ms     300.361ms             1  
+                                             cudaMalloc         0.00%      46.000us         0.00%      46.000us      46.000us             1  
+                                             cudaMalloc         0.00%       5.000us         0.00%       5.000us       5.000us             1  
+                                             cudaMalloc         0.01%     377.000us         0.01%     377.000us     377.000us             1  
+                                               cudaFree         0.00%       1.000us         0.00%       1.000us       1.000us             1  
+                                  cudaStreamIsCapturing         0.00%       1.000us         0.00%       1.000us       1.000us             1  
+                                  cudaStreamGetPriority         0.00%       0.000us         0.00%       0.000us       0.000us             1  
+                       cudaDeviceGetStreamPriorityRange         0.00%       0.000us         0.00%       0.000us       0.000us             1  
+                                  cudaFuncGetAttributes        48.38%        2.257s        48.38%        2.257s        2.257s             1  
+                                   cudaFuncSetAttribute         0.00%       3.000us         0.00%       3.000us       3.000us             1  
+                                   cudaFuncSetAttribute         0.00%       0.000us         0.00%       0.000us       0.000us             1  
+                                  cudaFuncGetAttributes         0.00%       3.000us         0.00%       3.000us       3.000us             1  
+                                   cudaFuncSetAttribute         0.00%       0.000us         0.00%       0.000us       0.000us             1  
+                                   cudaFuncSetAttribute         0.00%       0.000us         0.00%       0.000us       0.000us             1  
+                                            aten::empty         0.00%      37.000us         0.00%      37.000us      37.000us             1  
+                                  cudaFuncGetAttributes         0.00%       3.000us         0.00%       3.000us       3.000us             1  
+                                   cudaFuncSetAttribute         0.00%       1.000us         0.00%       1.000us       1.000us             1  
+                                   cudaFuncSetAttribute         0.00%       0.000us         0.00%       0.000us       0.000us             1  
+                                        cudaMemsetAsync         0.00%      57.000us         0.00%      57.000us      57.000us             1  
+                                       cudaLaunchKernel         0.00%      21.000us         0.00%      21.000us      21.000us             1  
+                                        cudaMemsetAsync         0.00%       4.000us         0.00%       4.000us       4.000us             1  
+                                       cudaLaunchKernel         0.00%       4.000us         0.00%       4.000us       4.000us             1  
+                                   cudaFuncSetAttribute         0.00%       0.000us         0.00%       0.000us       0.000us             1  
+                                   cudaFuncSetAttribute         0.00%       0.000us         0.00%       0.000us       0.000us             1  
+                                       cudaLaunchKernel         0.00%       7.000us         0.00%       7.000us       7.000us             1  
+                                       cudaLaunchKernel         0.00%      20.000us         0.00%      20.000us      20.000us             1  
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  
+Self CPU time total: 4.665s
+
+Finished profiling.
+/media/sdb_disk/grade2020/cairui/miniconda3/lib/python3.8/site-packages/torch/nn/functional.py:1331: UserWarning: dropout2d: Received a 2-D input to dropout2d, which is deprecated and will result in an error in a future release. To retain the behavior and silence this warning, please use dropout instead. Note that dropout2d exists to provide channel-wise dropout on inputs with 2 spatial dimensions, a channel dimension, and an optional batch dimension (i.e. 3D or 4D inputs).
+  warnings.warn(warn_msg)
+Train Epoch: 1 [0/60000 (0%)]	Loss: 2.306402
+Train Epoch: 1 [640/60000 (1%)]	Loss: 1.510896
+Train Epoch: 1 [1280/60000 (2%)]	Loss: 0.793270
+Train Epoch: 1 [1920/60000 (3%)]	Loss: 0.818384
+Train Epoch: 1 [2560/60000 (4%)]	Loss: 0.383676
+Train Epoch: 1 [3200/60000 (5%)]	Loss: 0.424491
+Train Epoch: 1 [3840/60000 (6%)]	Loss: 0.471672
+Train Epoch: 1 [4480/60000 (7%)]	Loss: 0.333521
+Train Epoch: 1 [5120/60000 (9%)]	Loss: 0.370504
+Train Epoch: 1 [5760/60000 (10%)]	Loss: 0.148149
+Train Epoch: 1 [6400/60000 (11%)]	Loss: 0.311540
+Train Epoch: 1 [7040/60000 (12%)]	Loss: 0.194275
+Train Epoch: 1 [7680/60000 (13%)]	Loss: 0.104139
+Train Epoch: 1 [8320/60000 (14%)]	Loss: 0.171166
+Train Epoch: 1 [8960/60000 (15%)]	Loss: 0.167686
+Train Epoch: 1 [9600/60000 (16%)]	Loss: 0.189391
+Train Epoch: 1 [10240/60000 (17%)]	Loss: 0.259996
+Train Epoch: 1 [10880/60000 (18%)]	Loss: 0.403091
+Train Epoch: 1 [11520/60000 (19%)]	Loss: 0.338435
+Train Epoch: 1 [12160/60000 (20%)]	Loss: 0.280244
+Train Epoch: 1 [12800/60000 (21%)]	Loss: 0.122333
+Train Epoch: 1 [13440/60000 (22%)]	Loss: 0.361344
+Train Epoch: 1 [14080/60000 (23%)]	Loss: 0.104251
+Train Epoch: 1 [14720/60000 (25%)]	Loss: 0.135669
+Train Epoch: 1 [15360/60000 (26%)]	Loss: 0.086421
+Train Epoch: 1 [16000/60000 (27%)]	Loss: 0.112492
+Train Epoch: 1 [16640/60000 (28%)]	Loss: 0.169175
+Train Epoch: 1 [17280/60000 (29%)]	Loss: 0.156703
+Train Epoch: 1 [17920/60000 (30%)]	Loss: 0.450577
+Train Epoch: 1 [18560/60000 (31%)]	Loss: 0.447727
+Train Epoch: 1 [19200/60000 (32%)]	Loss: 0.119744
+Train Epoch: 1 [19840/60000 (33%)]	Loss: 0.161555
+Train Epoch: 1 [20480/60000 (34%)]	Loss: 0.115683
+Train Epoch: 1 [21120/60000 (35%)]	Loss: 0.093302
+Train Epoch: 1 [21760/60000 (36%)]	Loss: 0.163814
+Train Epoch: 1 [22400/60000 (37%)]	Loss: 0.089413
+Train Epoch: 1 [23040/60000 (38%)]	Loss: 0.125442
+Train Epoch: 1 [23680/60000 (39%)]	Loss: 0.063223
+Train Epoch: 1 [24320/60000 (41%)]	Loss: 0.051643
+Train Epoch: 1 [24960/60000 (42%)]	Loss: 0.313695
+Train Epoch: 1 [25600/60000 (43%)]	Loss: 0.061633
+Train Epoch: 1 [26240/60000 (44%)]	Loss: 0.125350
+Train Epoch: 1 [26880/60000 (45%)]	Loss: 0.041707
+Train Epoch: 1 [27520/60000 (46%)]	Loss: 0.048794
+Train Epoch: 1 [28160/60000 (47%)]	Loss: 0.443034
+Train Epoch: 1 [28800/60000 (48%)]	Loss: 0.062547
+Train Epoch: 1 [29440/60000 (49%)]	Loss: 0.067363
+Train Epoch: 1 [30080/60000 (50%)]	Loss: 0.330415
+Train Epoch: 1 [30720/60000 (51%)]	Loss: 0.095671
+Train Epoch: 1 [31360/60000 (52%)]	Loss: 0.173996
+Train Epoch: 1 [32000/60000 (53%)]	Loss: 0.173462
+Train Epoch: 1 [32640/60000 (54%)]	Loss: 0.195603
+Train Epoch: 1 [33280/60000 (55%)]	Loss: 0.282491
+Train Epoch: 1 [33920/60000 (57%)]	Loss: 0.062173
+Train Epoch: 1 [34560/60000 (58%)]	Loss: 0.040768
+Train Epoch: 1 [35200/60000 (59%)]	Loss: 0.068832
+Train Epoch: 1 [35840/60000 (60%)]	Loss: 0.090826
+Train Epoch: 1 [36480/60000 (61%)]	Loss: 0.039064
+Train Epoch: 1 [37120/60000 (62%)]	Loss: 0.221080
+Train Epoch: 1 [37760/60000 (63%)]	Loss: 0.318671
+Train Epoch: 1 [38400/60000 (64%)]	Loss: 0.127582
+Train Epoch: 1 [39040/60000 (65%)]	Loss: 0.152842
+Train Epoch: 1 [39680/60000 (66%)]	Loss: 0.091707
+Train Epoch: 1 [40320/60000 (67%)]	Loss: 0.080999
+Train Epoch: 1 [40960/60000 (68%)]	Loss: 0.071444
+Train Epoch: 1 [41600/60000 (69%)]	Loss: 0.037025
+Train Epoch: 1 [42240/60000 (70%)]	Loss: 0.112232
+Train Epoch: 1 [42880/60000 (71%)]	Loss: 0.088100
+Train Epoch: 1 [43520/60000 (72%)]	Loss: 0.097756
+Train Epoch: 1 [44160/60000 (74%)]	Loss: 0.181890
+Train Epoch: 1 [44800/60000 (75%)]	Loss: 0.247458
+Train Epoch: 1 [45440/60000 (76%)]	Loss: 0.141800
+Train Epoch: 1 [46080/60000 (77%)]	Loss: 0.085046
+Train Epoch: 1 [46720/60000 (78%)]	Loss: 0.072346
+Train Epoch: 1 [47360/60000 (79%)]	Loss: 0.037462
+Train Epoch: 1 [48000/60000 (80%)]	Loss: 0.024631
+Train Epoch: 1 [48640/60000 (81%)]	Loss: 0.092919
+Train Epoch: 1 [49280/60000 (82%)]	Loss: 0.041921
+Train Epoch: 1 [49920/60000 (83%)]	Loss: 0.190758
+Train Epoch: 1 [50560/60000 (84%)]	Loss: 0.118248
+Train Epoch: 1 [51200/60000 (85%)]	Loss: 0.094212
+Train Epoch: 1 [51840/60000 (86%)]	Loss: 0.028577
+Train Epoch: 1 [52480/60000 (87%)]	Loss: 0.176413
+Train Epoch: 1 [53120/60000 (88%)]	Loss: 0.016580
+Train Epoch: 1 [53760/60000 (90%)]	Loss: 0.154447
+Train Epoch: 1 [54400/60000 (91%)]	Loss: 0.048244
+Train Epoch: 1 [55040/60000 (92%)]	Loss: 0.108402
+Train Epoch: 1 [55680/60000 (93%)]	Loss: 0.057271
+Train Epoch: 1 [56320/60000 (94%)]	Loss: 0.080686
+Train Epoch: 1 [56960/60000 (95%)]	Loss: 0.030689
+Train Epoch: 1 [57600/60000 (96%)]	Loss: 0.017433
+Train Epoch: 1 [58240/60000 (97%)]	Loss: 0.266757
+Train Epoch: 1 [58880/60000 (98%)]	Loss: 0.090762
+Train Epoch: 1 [59520/60000 (99%)]	Loss: 0.147336
+
+Test set: Average loss: 0.0529, Accuracy: 9825/10000 (98%)
+
+Train Epoch: 2 [0/60000 (0%)]	Loss: 0.055311
+Train Epoch: 2 [640/60000 (1%)]	Loss: 0.135254
+Train Epoch: 2 [1280/60000 (2%)]	Loss: 0.046636
+Train Epoch: 2 [1920/60000 (3%)]	Loss: 0.155510
+Train Epoch: 2 [2560/60000 (4%)]	Loss: 0.029957
+Train Epoch: 2 [3200/60000 (5%)]	Loss: 0.011987
+Train Epoch: 2 [3840/60000 (6%)]	Loss: 0.024075
+Train Epoch: 2 [4480/60000 (7%)]	Loss: 0.100633
+Train Epoch: 2 [5120/60000 (9%)]	Loss: 0.107361
+Train Epoch: 2 [5760/60000 (10%)]	Loss: 0.071862
+Train Epoch: 2 [6400/60000 (11%)]	Loss: 0.038179
+Train Epoch: 2 [7040/60000 (12%)]	Loss: 0.061084
+Train Epoch: 2 [7680/60000 (13%)]	Loss: 0.128071
+Train Epoch: 2 [8320/60000 (14%)]	Loss: 0.030581
+Train Epoch: 2 [8960/60000 (15%)]	Loss: 0.016449
+Train Epoch: 2 [9600/60000 (16%)]	Loss: 0.064512
+Train Epoch: 2 [10240/60000 (17%)]	Loss: 0.067686
+Train Epoch: 2 [10880/60000 (18%)]	Loss: 0.063577
+Train Epoch: 2 [11520/60000 (19%)]	Loss: 0.017303
+Train Epoch: 2 [12160/60000 (20%)]	Loss: 0.016902
+Train Epoch: 2 [12800/60000 (21%)]	Loss: 0.165091
+Train Epoch: 2 [13440/60000 (22%)]	Loss: 0.068197
+Train Epoch: 2 [14080/60000 (23%)]	Loss: 0.046649
+Train Epoch: 2 [14720/60000 (25%)]	Loss: 0.048077
+Train Epoch: 2 [15360/60000 (26%)]	Loss: 0.026637
+Train Epoch: 2 [16000/60000 (27%)]	Loss: 0.051954
+Train Epoch: 2 [16640/60000 (28%)]	Loss: 0.032361
+Train Epoch: 2 [17280/60000 (29%)]	Loss: 0.302874
+Train Epoch: 2 [17920/60000 (30%)]	Loss: 0.017595
+Train Epoch: 2 [18560/60000 (31%)]	Loss: 0.026607
+Train Epoch: 2 [19200/60000 (32%)]	Loss: 0.134096
+Train Epoch: 2 [19840/60000 (33%)]	Loss: 0.018323
+Train Epoch: 2 [20480/60000 (34%)]	Loss: 0.057990
+Train Epoch: 2 [21120/60000 (35%)]	Loss: 0.027039
+Train Epoch: 2 [21760/60000 (36%)]	Loss: 0.104864
+Train Epoch: 2 [22400/60000 (37%)]	Loss: 0.118632
+Train Epoch: 2 [23040/60000 (38%)]	Loss: 0.032436
+Train Epoch: 2 [23680/60000 (39%)]	Loss: 0.160245
+Train Epoch: 2 [24320/60000 (41%)]	Loss: 0.230357
+Train Epoch: 2 [24960/60000 (42%)]	Loss: 0.036551
+Train Epoch: 2 [25600/60000 (43%)]	Loss: 0.094556
+Train Epoch: 2 [26240/60000 (44%)]	Loss: 0.006916
+Train Epoch: 2 [26880/60000 (45%)]	Loss: 0.043922
+Train Epoch: 2 [27520/60000 (46%)]	Loss: 0.007841
+Train Epoch: 2 [28160/60000 (47%)]	Loss: 0.050679
+Train Epoch: 2 [28800/60000 (48%)]	Loss: 0.027596
+Train Epoch: 2 [29440/60000 (49%)]	Loss: 0.019512
+Train Epoch: 2 [30080/60000 (50%)]	Loss: 0.044527
+Train Epoch: 2 [30720/60000 (51%)]	Loss: 0.058288
+Train Epoch: 2 [31360/60000 (52%)]	Loss: 0.120417
+Train Epoch: 2 [32000/60000 (53%)]	Loss: 0.033224
+Train Epoch: 2 [32640/60000 (54%)]	Loss: 0.018257
+Train Epoch: 2 [33280/60000 (55%)]	Loss: 0.200148
+Train Epoch: 2 [33920/60000 (57%)]	Loss: 0.035973
+Train Epoch: 2 [34560/60000 (58%)]	Loss: 0.019541
+Train Epoch: 2 [35200/60000 (59%)]	Loss: 0.014726
+Train Epoch: 2 [35840/60000 (60%)]	Loss: 0.053115
+Train Epoch: 2 [36480/60000 (61%)]	Loss: 0.102911
+Train Epoch: 2 [37120/60000 (62%)]	Loss: 0.055145
+Train Epoch: 2 [37760/60000 (63%)]	Loss: 0.010100
+Train Epoch: 2 [38400/60000 (64%)]	Loss: 0.093806
+Train Epoch: 2 [39040/60000 (65%)]	Loss: 0.039811
+Train Epoch: 2 [39680/60000 (66%)]	Loss: 0.027593
+Train Epoch: 2 [40320/60000 (67%)]	Loss: 0.019839
+Train Epoch: 2 [40960/60000 (68%)]	Loss: 0.188367
+Train Epoch: 2 [41600/60000 (69%)]	Loss: 0.149660
+Train Epoch: 2 [42240/60000 (70%)]	Loss: 0.028571
+Train Epoch: 2 [42880/60000 (71%)]	Loss: 0.009753
+Train Epoch: 2 [43520/60000 (72%)]	Loss: 0.130294
+Train Epoch: 2 [44160/60000 (74%)]	Loss: 0.115391
+Train Epoch: 2 [44800/60000 (75%)]	Loss: 0.114980
+Train Epoch: 2 [45440/60000 (76%)]	Loss: 0.072831
+Train Epoch: 2 [46080/60000 (77%)]	Loss: 0.073942
+Train Epoch: 2 [46720/60000 (78%)]	Loss: 0.124265
+Train Epoch: 2 [47360/60000 (79%)]	Loss: 0.095436
+Train Epoch: 2 [48000/60000 (80%)]	Loss: 0.026098
+Train Epoch: 2 [48640/60000 (81%)]	Loss: 0.245753
+Train Epoch: 2 [49280/60000 (82%)]	Loss: 0.037560
+Train Epoch: 2 [49920/60000 (83%)]	Loss: 0.009997
+Train Epoch: 2 [50560/60000 (84%)]	Loss: 0.223416
+Train Epoch: 2 [51200/60000 (85%)]	Loss: 0.219203
+Train Epoch: 2 [51840/60000 (86%)]	Loss: 0.133094
+Train Epoch: 2 [52480/60000 (87%)]	Loss: 0.026751
+Train Epoch: 2 [53120/60000 (88%)]	Loss: 0.036866
+Train Epoch: 2 [53760/60000 (90%)]	Loss: 0.033340
+Train Epoch: 2 [54400/60000 (91%)]	Loss: 0.058075
+Train Epoch: 2 [55040/60000 (92%)]	Loss: 0.174119
+Train Epoch: 2 [55680/60000 (93%)]	Loss: 0.053628
+Train Epoch: 2 [56320/60000 (94%)]	Loss: 0.021730
+Train Epoch: 2 [56960/60000 (95%)]	Loss: 0.017677
+Train Epoch: 2 [57600/60000 (96%)]	Loss: 0.037365
+Train Epoch: 2 [58240/60000 (97%)]	Loss: 0.063298
+Train Epoch: 2 [58880/60000 (98%)]	Loss: 0.035090
+Train Epoch: 2 [59520/60000 (99%)]	Loss: 0.241175
+
+Test set: Average loss: 0.0387, Accuracy: 9880/10000 (99%)
+
+Train Epoch: 3 [0/60000 (0%)]	Loss: 0.018992
+Train Epoch: 3 [640/60000 (1%)]	Loss: 0.105557
+Train Epoch: 3 [1280/60000 (2%)]	Loss: 0.038181
+Train Epoch: 3 [1920/60000 (3%)]	Loss: 0.023855
+Train Epoch: 3 [2560/60000 (4%)]	Loss: 0.018453
+Train Epoch: 3 [3200/60000 (5%)]	Loss: 0.017465
+Train Epoch: 3 [3840/60000 (6%)]	Loss: 0.062181
+Train Epoch: 3 [4480/60000 (7%)]	Loss: 0.026077
+Train Epoch: 3 [5120/60000 (9%)]	Loss: 0.168051
+Train Epoch: 3 [5760/60000 (10%)]	Loss: 0.066828
+Train Epoch: 3 [6400/60000 (11%)]	Loss: 0.018513
+Train Epoch: 3 [7040/60000 (12%)]	Loss: 0.021622
+Train Epoch: 3 [7680/60000 (13%)]	Loss: 0.208487
+Train Epoch: 3 [8320/60000 (14%)]	Loss: 0.031418
+Train Epoch: 3 [8960/60000 (15%)]	Loss: 0.042593
+Train Epoch: 3 [9600/60000 (16%)]	Loss: 0.049691
+Train Epoch: 3 [10240/60000 (17%)]	Loss: 0.058052
+Train Epoch: 3 [10880/60000 (18%)]	Loss: 0.016225
+Train Epoch: 3 [11520/60000 (19%)]	Loss: 0.042591
+Train Epoch: 3 [12160/60000 (20%)]	Loss: 0.050214
+Train Epoch: 3 [12800/60000 (21%)]	Loss: 0.058816
+Train Epoch: 3 [13440/60000 (22%)]	Loss: 0.001792
+Train Epoch: 3 [14080/60000 (23%)]	Loss: 0.084831
+Train Epoch: 3 [14720/60000 (25%)]	Loss: 0.131181
+Train Epoch: 3 [15360/60000 (26%)]	Loss: 0.023520
+Train Epoch: 3 [16000/60000 (27%)]	Loss: 0.101265
+Train Epoch: 3 [16640/60000 (28%)]	Loss: 0.010875
+Train Epoch: 3 [17280/60000 (29%)]	Loss: 0.022427
+Train Epoch: 3 [17920/60000 (30%)]	Loss: 0.006665
+Train Epoch: 3 [18560/60000 (31%)]	Loss: 0.035960
+Train Epoch: 3 [19200/60000 (32%)]	Loss: 0.006568
+Train Epoch: 3 [19840/60000 (33%)]	Loss: 0.022021
+Train Epoch: 3 [20480/60000 (34%)]	Loss: 0.046214
+Train Epoch: 3 [21120/60000 (35%)]	Loss: 0.074976
+Train Epoch: 3 [21760/60000 (36%)]	Loss: 0.012734
+Train Epoch: 3 [22400/60000 (37%)]	Loss: 0.023927
+Train Epoch: 3 [23040/60000 (38%)]	Loss: 0.134629
+Train Epoch: 3 [23680/60000 (39%)]	Loss: 0.255956
+Train Epoch: 3 [24320/60000 (41%)]	Loss: 0.173245
+Train Epoch: 3 [24960/60000 (42%)]	Loss: 0.011781
+Train Epoch: 3 [25600/60000 (43%)]	Loss: 0.029965
+Train Epoch: 3 [26240/60000 (44%)]	Loss: 0.004448
+Train Epoch: 3 [26880/60000 (45%)]	Loss: 0.007232
+Train Epoch: 3 [27520/60000 (46%)]	Loss: 0.109035
+Train Epoch: 3 [28160/60000 (47%)]	Loss: 0.006753
+Train Epoch: 3 [28800/60000 (48%)]	Loss: 0.015168
+Train Epoch: 3 [29440/60000 (49%)]	Loss: 0.037727
+Train Epoch: 3 [30080/60000 (50%)]	Loss: 0.097594
+Train Epoch: 3 [30720/60000 (51%)]	Loss: 0.023532
+Train Epoch: 3 [31360/60000 (52%)]	Loss: 0.031351
+Train Epoch: 3 [32000/60000 (53%)]	Loss: 0.148600
+Train Epoch: 3 [32640/60000 (54%)]	Loss: 0.002908
+Train Epoch: 3 [33280/60000 (55%)]	Loss: 0.123576
+Train Epoch: 3 [33920/60000 (57%)]	Loss: 0.074663
+Train Epoch: 3 [34560/60000 (58%)]	Loss: 0.001293
+Train Epoch: 3 [35200/60000 (59%)]	Loss: 0.062280
+Train Epoch: 3 [35840/60000 (60%)]	Loss: 0.034476
+Train Epoch: 3 [36480/60000 (61%)]	Loss: 0.032433
+Train Epoch: 3 [37120/60000 (62%)]	Loss: 0.052060
+Train Epoch: 3 [37760/60000 (63%)]	Loss: 0.040924
+Train Epoch: 3 [38400/60000 (64%)]	Loss: 0.052991
+Train Epoch: 3 [39040/60000 (65%)]	Loss: 0.031007
+Train Epoch: 3 [39680/60000 (66%)]	Loss: 0.025850
+Train Epoch: 3 [40320/60000 (67%)]	Loss: 0.022537
+Train Epoch: 3 [40960/60000 (68%)]	Loss: 0.027995
+Train Epoch: 3 [41600/60000 (69%)]	Loss: 0.036962
+Train Epoch: 3 [42240/60000 (70%)]	Loss: 0.027940
+Train Epoch: 3 [42880/60000 (71%)]	Loss: 0.090115
+Train Epoch: 3 [43520/60000 (72%)]	Loss: 0.031494
+Train Epoch: 3 [44160/60000 (74%)]	Loss: 0.014663
+Train Epoch: 3 [44800/60000 (75%)]	Loss: 0.161903
+Train Epoch: 3 [45440/60000 (76%)]	Loss: 0.004435
+Train Epoch: 3 [46080/60000 (77%)]	Loss: 0.114281
+Train Epoch: 3 [46720/60000 (78%)]	Loss: 0.006364
+Train Epoch: 3 [47360/60000 (79%)]	Loss: 0.164627
+Train Epoch: 3 [48000/60000 (80%)]	Loss: 0.005542
+Train Epoch: 3 [48640/60000 (81%)]	Loss: 0.225955
+Train Epoch: 3 [49280/60000 (82%)]	Loss: 0.053652
+Train Epoch: 3 [49920/60000 (83%)]	Loss: 0.100493
+Train Epoch: 3 [50560/60000 (84%)]	Loss: 0.109370
+Train Epoch: 3 [51200/60000 (85%)]	Loss: 0.032431
+Train Epoch: 3 [51840/60000 (86%)]	Loss: 0.065875
+Train Epoch: 3 [52480/60000 (87%)]	Loss: 0.306961
+Train Epoch: 3 [53120/60000 (88%)]	Loss: 0.049808
+Train Epoch: 3 [53760/60000 (90%)]	Loss: 0.124176
+Train Epoch: 3 [54400/60000 (91%)]	Loss: 0.017946
+Train Epoch: 3 [55040/60000 (92%)]	Loss: 0.043083
+Train Epoch: 3 [55680/60000 (93%)]	Loss: 0.016362
+Train Epoch: 3 [56320/60000 (94%)]	Loss: 0.153050
+Train Epoch: 3 [56960/60000 (95%)]	Loss: 0.008754
+Train Epoch: 3 [57600/60000 (96%)]	Loss: 0.021148
+Train Epoch: 3 [58240/60000 (97%)]	Loss: 0.044336
+Train Epoch: 3 [58880/60000 (98%)]	Loss: 0.007172
+Train Epoch: 3 [59520/60000 (99%)]	Loss: 0.013327
+
+Test set: Average loss: 0.0326, Accuracy: 9889/10000 (99%)
+
+Train Epoch: 4 [0/60000 (0%)]	Loss: 0.080560
+Train Epoch: 4 [640/60000 (1%)]	Loss: 0.061718
+Train Epoch: 4 [1280/60000 (2%)]	Loss: 0.016943
+Train Epoch: 4 [1920/60000 (3%)]	Loss: 0.008266
+Train Epoch: 4 [2560/60000 (4%)]	Loss: 0.037155
+Train Epoch: 4 [3200/60000 (5%)]	Loss: 0.013381
+Train Epoch: 4 [3840/60000 (6%)]	Loss: 0.039342
+Train Epoch: 4 [4480/60000 (7%)]	Loss: 0.020755
+Train Epoch: 4 [5120/60000 (9%)]	Loss: 0.091395
+Train Epoch: 4 [5760/60000 (10%)]	Loss: 0.019442
+Train Epoch: 4 [6400/60000 (11%)]	Loss: 0.050361
+Train Epoch: 4 [7040/60000 (12%)]	Loss: 0.023649
+Train Epoch: 4 [7680/60000 (13%)]	Loss: 0.055115
+Train Epoch: 4 [8320/60000 (14%)]	Loss: 0.042910
+Train Epoch: 4 [8960/60000 (15%)]	Loss: 0.010773
+Train Epoch: 4 [9600/60000 (16%)]	Loss: 0.001748
+Train Epoch: 4 [10240/60000 (17%)]	Loss: 0.059374
+Train Epoch: 4 [10880/60000 (18%)]	Loss: 0.334662
+Train Epoch: 4 [11520/60000 (19%)]	Loss: 0.005452
+Train Epoch: 4 [12160/60000 (20%)]	Loss: 0.118945
+Train Epoch: 4 [12800/60000 (21%)]	Loss: 0.008949
+Train Epoch: 4 [13440/60000 (22%)]	Loss: 0.031585
+Train Epoch: 4 [14080/60000 (23%)]	Loss: 0.005192
+Train Epoch: 4 [14720/60000 (25%)]	Loss: 0.029234
+Train Epoch: 4 [15360/60000 (26%)]	Loss: 0.011755
+Train Epoch: 4 [16000/60000 (27%)]	Loss: 0.005886
+Train Epoch: 4 [16640/60000 (28%)]	Loss: 0.021976
+Train Epoch: 4 [17280/60000 (29%)]	Loss: 0.009986
+Train Epoch: 4 [17920/60000 (30%)]	Loss: 0.002341
+Train Epoch: 4 [18560/60000 (31%)]	Loss: 0.007366
+Train Epoch: 4 [19200/60000 (32%)]	Loss: 0.022434
+Train Epoch: 4 [19840/60000 (33%)]	Loss: 0.014903
+Train Epoch: 4 [20480/60000 (34%)]	Loss: 0.117936
+Train Epoch: 4 [21120/60000 (35%)]	Loss: 0.009879
+Train Epoch: 4 [21760/60000 (36%)]	Loss: 0.001126
+Train Epoch: 4 [22400/60000 (37%)]	Loss: 0.042973
+Train Epoch: 4 [23040/60000 (38%)]	Loss: 0.011272
+Train Epoch: 4 [23680/60000 (39%)]	Loss: 0.007165
+Train Epoch: 4 [24320/60000 (41%)]	Loss: 0.050430
+Train Epoch: 4 [24960/60000 (42%)]	Loss: 0.137494
+Train Epoch: 4 [25600/60000 (43%)]	Loss: 0.011336
+Train Epoch: 4 [26240/60000 (44%)]	Loss: 0.013293
+Train Epoch: 4 [26880/60000 (45%)]	Loss: 0.100985
+Train Epoch: 4 [27520/60000 (46%)]	Loss: 0.013070
+Train Epoch: 4 [28160/60000 (47%)]	Loss: 0.096870
+Train Epoch: 4 [28800/60000 (48%)]	Loss: 0.004241
+Train Epoch: 4 [29440/60000 (49%)]	Loss: 0.002680
+Train Epoch: 4 [30080/60000 (50%)]	Loss: 0.003083
+Train Epoch: 4 [30720/60000 (51%)]	Loss: 0.033783
+Train Epoch: 4 [31360/60000 (52%)]	Loss: 0.019551
+Train Epoch: 4 [32000/60000 (53%)]	Loss: 0.065420
+Train Epoch: 4 [32640/60000 (54%)]	Loss: 0.036705
+Train Epoch: 4 [33280/60000 (55%)]	Loss: 0.037828
+Train Epoch: 4 [33920/60000 (57%)]	Loss: 0.033706
+Train Epoch: 4 [34560/60000 (58%)]	Loss: 0.068422
+Train Epoch: 4 [35200/60000 (59%)]	Loss: 0.090795
+Train Epoch: 4 [35840/60000 (60%)]	Loss: 0.066706
+Train Epoch: 4 [36480/60000 (61%)]	Loss: 0.031308
+Train Epoch: 4 [37120/60000 (62%)]	Loss: 0.055298
+Train Epoch: 4 [37760/60000 (63%)]	Loss: 0.022376
+Train Epoch: 4 [38400/60000 (64%)]	Loss: 0.028231
+Train Epoch: 4 [39040/60000 (65%)]	Loss: 0.065685
+Train Epoch: 4 [39680/60000 (66%)]	Loss: 0.016214
+Train Epoch: 4 [40320/60000 (67%)]	Loss: 0.075458
+Train Epoch: 4 [40960/60000 (68%)]	Loss: 0.061296
+Train Epoch: 4 [41600/60000 (69%)]	Loss: 0.026219
+Train Epoch: 4 [42240/60000 (70%)]	Loss: 0.016250
+Train Epoch: 4 [42880/60000 (71%)]	Loss: 0.024442
+Train Epoch: 4 [43520/60000 (72%)]	Loss: 0.000744
+Train Epoch: 4 [44160/60000 (74%)]	Loss: 0.001556
+Train Epoch: 4 [44800/60000 (75%)]	Loss: 0.022159
+Train Epoch: 4 [45440/60000 (76%)]	Loss: 0.020711
+Train Epoch: 4 [46080/60000 (77%)]	Loss: 0.006488
+Train Epoch: 4 [46720/60000 (78%)]	Loss: 0.029788
+Train Epoch: 4 [47360/60000 (79%)]	Loss: 0.001954
+Train Epoch: 4 [48000/60000 (80%)]	Loss: 0.069764
+Train Epoch: 4 [48640/60000 (81%)]	Loss: 0.065520
+Train Epoch: 4 [49280/60000 (82%)]	Loss: 0.056328
+Train Epoch: 4 [49920/60000 (83%)]	Loss: 0.005468
+Train Epoch: 4 [50560/60000 (84%)]	Loss: 0.148975
+Train Epoch: 4 [51200/60000 (85%)]	Loss: 0.062987
+Train Epoch: 4 [51840/60000 (86%)]	Loss: 0.031781
+Train Epoch: 4 [52480/60000 (87%)]	Loss: 0.004795
+Train Epoch: 4 [53120/60000 (88%)]	Loss: 0.033115
+Train Epoch: 4 [53760/60000 (90%)]	Loss: 0.066137
+Train Epoch: 4 [54400/60000 (91%)]	Loss: 0.009242
+Train Epoch: 4 [55040/60000 (92%)]	Loss: 0.048192
+Train Epoch: 4 [55680/60000 (93%)]	Loss: 0.010934
+Train Epoch: 4 [56320/60000 (94%)]	Loss: 0.002481
+Train Epoch: 4 [56960/60000 (95%)]	Loss: 0.011934
+Train Epoch: 4 [57600/60000 (96%)]	Loss: 0.176131
+Train Epoch: 4 [58240/60000 (97%)]	Loss: 0.004954
+Train Epoch: 4 [58880/60000 (98%)]	Loss: 0.085870
+Train Epoch: 4 [59520/60000 (99%)]	Loss: 0.054483
+
+Test set: Average loss: 0.0326, Accuracy: 9894/10000 (99%)
+
+Train Epoch: 5 [0/60000 (0%)]	Loss: 0.047044
+Train Epoch: 5 [640/60000 (1%)]	Loss: 0.019665
+Train Epoch: 5 [1280/60000 (2%)]	Loss: 0.010131
+Train Epoch: 5 [1920/60000 (3%)]	Loss: 0.041604
+Train Epoch: 5 [2560/60000 (4%)]	Loss: 0.005985
+Train Epoch: 5 [3200/60000 (5%)]	Loss: 0.006629
+Train Epoch: 5 [3840/60000 (6%)]	Loss: 0.089846
+Train Epoch: 5 [4480/60000 (7%)]	Loss: 0.177948
+Train Epoch: 5 [5120/60000 (9%)]	Loss: 0.254188
+Train Epoch: 5 [5760/60000 (10%)]	Loss: 0.005396
+Train Epoch: 5 [6400/60000 (11%)]	Loss: 0.018129
+Train Epoch: 5 [7040/60000 (12%)]	Loss: 0.046838
+Train Epoch: 5 [7680/60000 (13%)]	Loss: 0.014010
+Train Epoch: 5 [8320/60000 (14%)]	Loss: 0.049277
+Train Epoch: 5 [8960/60000 (15%)]	Loss: 0.034510
+Train Epoch: 5 [9600/60000 (16%)]	Loss: 0.046306
+Train Epoch: 5 [10240/60000 (17%)]	Loss: 0.101766
+Train Epoch: 5 [10880/60000 (18%)]	Loss: 0.064781
+Train Epoch: 5 [11520/60000 (19%)]	Loss: 0.152706
+Train Epoch: 5 [12160/60000 (20%)]	Loss: 0.077126
+Train Epoch: 5 [12800/60000 (21%)]	Loss: 0.041173
+Train Epoch: 5 [13440/60000 (22%)]	Loss: 0.061050
+Train Epoch: 5 [14080/60000 (23%)]	Loss: 0.000845
+Train Epoch: 5 [14720/60000 (25%)]	Loss: 0.012411
+Train Epoch: 5 [15360/60000 (26%)]	Loss: 0.083181
+Train Epoch: 5 [16000/60000 (27%)]	Loss: 0.159333
+Train Epoch: 5 [16640/60000 (28%)]	Loss: 0.057830
+Train Epoch: 5 [17280/60000 (29%)]	Loss: 0.076704
+Train Epoch: 5 [17920/60000 (30%)]	Loss: 0.003150
+Train Epoch: 5 [18560/60000 (31%)]	Loss: 0.064178
+Train Epoch: 5 [19200/60000 (32%)]	Loss: 0.000875
+Train Epoch: 5 [19840/60000 (33%)]	Loss: 0.062968
+Train Epoch: 5 [20480/60000 (34%)]	Loss: 0.003049
+Train Epoch: 5 [21120/60000 (35%)]	Loss: 0.020595
+Train Epoch: 5 [21760/60000 (36%)]	Loss: 0.088508
+Train Epoch: 5 [22400/60000 (37%)]	Loss: 0.064203
+Train Epoch: 5 [23040/60000 (38%)]	Loss: 0.042608
+Train Epoch: 5 [23680/60000 (39%)]	Loss: 0.128725
+Train Epoch: 5 [24320/60000 (41%)]	Loss: 0.010206
+Train Epoch: 5 [24960/60000 (42%)]	Loss: 0.078756
+Train Epoch: 5 [25600/60000 (43%)]	Loss: 0.009649
+Train Epoch: 5 [26240/60000 (44%)]	Loss: 0.027105
+Train Epoch: 5 [26880/60000 (45%)]	Loss: 0.028114
+Train Epoch: 5 [27520/60000 (46%)]	Loss: 0.072567
+Train Epoch: 5 [28160/60000 (47%)]	Loss: 0.003998
+Train Epoch: 5 [28800/60000 (48%)]	Loss: 0.013842
+Train Epoch: 5 [29440/60000 (49%)]	Loss: 0.095686
+Train Epoch: 5 [30080/60000 (50%)]	Loss: 0.001871
+Train Epoch: 5 [30720/60000 (51%)]	Loss: 0.013508
+Train Epoch: 5 [31360/60000 (52%)]	Loss: 0.040873
+Train Epoch: 5 [32000/60000 (53%)]	Loss: 0.010427
+Train Epoch: 5 [32640/60000 (54%)]	Loss: 0.026082
+Train Epoch: 5 [33280/60000 (55%)]	Loss: 0.011725
+Train Epoch: 5 [33920/60000 (57%)]	Loss: 0.004848
+Train Epoch: 5 [34560/60000 (58%)]	Loss: 0.121052
+Train Epoch: 5 [35200/60000 (59%)]	Loss: 0.005101
+Train Epoch: 5 [35840/60000 (60%)]	Loss: 0.001061
+Train Epoch: 5 [36480/60000 (61%)]	Loss: 0.011193
+Train Epoch: 5 [37120/60000 (62%)]	Loss: 0.003795
+Train Epoch: 5 [37760/60000 (63%)]	Loss: 0.030909
+Train Epoch: 5 [38400/60000 (64%)]	Loss: 0.015365
+Train Epoch: 5 [39040/60000 (65%)]	Loss: 0.013848
+Train Epoch: 5 [39680/60000 (66%)]	Loss: 0.043082
+Train Epoch: 5 [40320/60000 (67%)]	Loss: 0.008048
+Train Epoch: 5 [40960/60000 (68%)]	Loss: 0.237351
+Train Epoch: 5 [41600/60000 (69%)]	Loss: 0.004289
+Train Epoch: 5 [42240/60000 (70%)]	Loss: 0.057139
+Train Epoch: 5 [42880/60000 (71%)]	Loss: 0.023488
+Train Epoch: 5 [43520/60000 (72%)]	Loss: 0.005038
+Train Epoch: 5 [44160/60000 (74%)]	Loss: 0.008902
+Train Epoch: 5 [44800/60000 (75%)]	Loss: 0.011013
+Train Epoch: 5 [45440/60000 (76%)]	Loss: 0.081054
+Train Epoch: 5 [46080/60000 (77%)]	Loss: 0.031517
+Train Epoch: 5 [46720/60000 (78%)]	Loss: 0.013867
+Train Epoch: 5 [47360/60000 (79%)]	Loss: 0.080713
+Train Epoch: 5 [48000/60000 (80%)]	Loss: 0.046298
+Train Epoch: 5 [48640/60000 (81%)]	Loss: 0.033372
+Train Epoch: 5 [49280/60000 (82%)]	Loss: 0.065473
+Train Epoch: 5 [49920/60000 (83%)]	Loss: 0.101655
+Train Epoch: 5 [50560/60000 (84%)]	Loss: 0.002470
+Train Epoch: 5 [51200/60000 (85%)]	Loss: 0.005172
+Train Epoch: 5 [51840/60000 (86%)]	Loss: 0.014613
+Train Epoch: 5 [52480/60000 (87%)]	Loss: 0.036254
+Train Epoch: 5 [53120/60000 (88%)]	Loss: 0.047094
+Train Epoch: 5 [53760/60000 (90%)]	Loss: 0.003600
+Train Epoch: 5 [54400/60000 (91%)]	Loss: 0.065912
+Train Epoch: 5 [55040/60000 (92%)]	Loss: 0.023321
+Train Epoch: 5 [55680/60000 (93%)]	Loss: 0.004198
+Train Epoch: 5 [56320/60000 (94%)]	Loss: 0.016791
+Train Epoch: 5 [56960/60000 (95%)]	Loss: 0.009106
+Train Epoch: 5 [57600/60000 (96%)]	Loss: 0.000738
+Train Epoch: 5 [58240/60000 (97%)]	Loss: 0.013868
+Train Epoch: 5 [58880/60000 (98%)]	Loss: 0.052049
+Train Epoch: 5 [59520/60000 (99%)]	Loss: 0.015075
+
+Test set: Average loss: 0.0316, Accuracy: 9904/10000 (99%)
+

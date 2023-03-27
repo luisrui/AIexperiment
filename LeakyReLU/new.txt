@@ -1,0 +1,4 @@
+python cuda 4.665s
+c++ cuda 2.472s
+python cpu 10.323s
+c++ cpu 8.775s
